@@ -20,19 +20,11 @@ $(document ).ready(function() {
             targetNum = (Math.floor(Math.random() * 102) + 19);
             $(".randomNumberBox").html(targetNum);
     
-            //random number everytime a crystal is clicked
-            $("#green").on("click", function () {
-                crystals.green.value = Math.floor(Math.random() * 12) + 1;
-            });
-            $("#red").on("click", function (){
-                crystals.red.value = Math.floor(Math.random() * 12) + 1;
-            });
-            $("#silver").on("click", function (){
-                crystals.silver.value = Math.floor(Math.random() * 12) + 1;
-            });
-            $("#yellow").on("click", function (){
-                crystals.yellow.value = Math.floor(Math.random() * 12) + 1;
-            });
+            //each crystal has a random value at the start 
+            crystals.green.value = Math.floor(Math.random() * 12) + 1;
+            crystals.red.value = Math.floor(Math.random() * 12) + 1;
+            crystals.silver.value = Math.floor(Math.random() * 12) + 1;
+            crystals.yellow.value = Math.floor(Math.random() * 12) + 1;
         };
         //adds crystals to total score
         function adding(crystals) {
