@@ -1,0 +1,89 @@
+body{
+    background-color:rgb(124, 231, 204);
+    background-image: url("../images/lilypad.jpg");
+    border: 5px solid black;
+    outline:black solid 10px;
+}
+img{
+    width:22%;
+    margin-left:2%;
+    height:145.5px;
+    float: left;
+}
+.titleBox{
+    background-color:#B0581F;
+    height:70px;
+    width:20%;
+    margin-bottom:1%;
+    margin-left:1%;
+    margin-top:2%;
+    display: flex;
+    font-display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size:30px;
+    color:white;
+}
+.directionBox{
+    background-color:#ECE4B4;
+    width:40%;
+    color:green;
+    font-size:20px;
+    padding-left:.5%;
+    padding-bottom:10%;
+    padding-top:1%;
+    margin-bottom:1%;
+    margin-left:1%;
+}
+.randomNumberBox{
+    color:purple;
+    background-color:#6BC239;
+    padding:8px;
+    height:150px;
+    width:20%;
+    float: left;
+    margin-bottom:2%;
+    margin-left:1%;
+    margin-right:2%;
+    font-size:200%
+}
+.winLoseBox{
+    background-color:#54EADF;
+    width:7%;
+    padding-top:15px;
+    height:150px;
+    position: absolute;
+    left:21%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+    margin-left:3%;
+}
+.crystalsBox{
+    margin:.5%;
+    width:35%;
+    height:150px;
+    clear: both;
+}
+.totalScoreText{
+    color:white;
+    background-color:rgb(25, 139, 134);
+    padding:8px;
+    margin-top:1%;
+    margin-left:1%;
+    height:20px;
+    width:20%;
+}
+.totalScoreBox{
+    color:white;
+    background-color: rgb(25, 139, 134);
+    width:20%;
+    padding:8px;
+    margin-top:1%;
+    margin-left:1%;
+    margin-bottom:2%;
+    height:150px;
+    font-size:200%;
+}
