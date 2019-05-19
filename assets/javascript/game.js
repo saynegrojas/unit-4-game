@@ -1,9 +1,9 @@
 $(document ).ready(function() {
     //object for all the crystals
         var crystals = {
-            green: {image: "green", value: 0},
+            blue: {image: "blue", value: 0},
             red: {image: "red", value: 0},
-            silver: {image: "silver", value: 0},
+            purple: {image: "purple", value: 0},
             yellow: {image: "yellow", value: 0},
         };
     
@@ -18,61 +18,72 @@ $(document ).ready(function() {
             counter = 0;
             //random number on the target box
             targetNum = (Math.floor(Math.random() * 102) + 19);
-            $(".randomNumberBox").html(targetNum);
+            $(".randomNumber").html(targetNum);
     
             //each crystal has a random value at the start 
-            crystals.green.value = Math.floor(Math.random() * 12) + 1;
+            crystals.blue.value = Math.floor(Math.random() * 12) + 1;
             crystals.red.value = Math.floor(Math.random() * 12) + 1;
-            crystals.silver.value = Math.floor(Math.random() * 12) + 1;
+            crystals.purple.value = Math.floor(Math.random() * 12) + 1;
             crystals.yellow.value = Math.floor(Math.random() * 12) + 1;
         };
         //adds crystals to total score
         function adding(crystals) {
             counter += crystals.value;
-            $(".totalScoreBox").html(counter);
+            $(".totalScore").html(counter);
             check();
         }
         //checks if counter matches or goes over 
         //?? does if/else if need else ?
         function check() {
             if (counter > targetNum) {
-                losses++;
-                lossesText();
-                $("#loss").html(losses);
+                lossesInfo();
                 start();
             } else if (counter === targetNum) {
-                wins++;
-                winsText();
-                $("#wins").html(wins);
+                winsInfo();
                 start();
             }
         }
         //start function called 
         start();
-    
+        
+        //function to display info and add win/loss
+        function winsInfo() {
+            wins++;
+            winsText();
+            $("#wins").html(wins + "<h3> You Win! </h3>")
+        }
+        function lossesInfo() {
+            losses++;
+            lossesText();
+            $("#losses").html(losses + "<h3> You Lost! </h3>")
+        }
         //adds and displays inside the total score box
-        $("#green").on("click", function () {
-            adding(crystals.green);
+        $("#blue").on("click", function () {
+            adding(crystals.blue);
         });
         $("#red").on("click", function () {
             adding(crystals.red);
         });
-        $("#silver").on("click", function () {
-            adding(crystals.silver);
+        $("#purple").on("click", function () {
+            adding(crystals.purple);
         });
         $("#yellow").on("click", function () {
             adding(crystals.yellow);
         });
         
         //function alerts when results occur
-        function winsText(){
+        function winsText() {
             setTimeout(function () {
                 alert("CONGRATS, YOU WON!");
+                //once alert function gets a response from user, message will disappear from winLoss class box. 
+                $("#wins").html(wins);                   
             }, 500);
-        };
-        function lossesText(){
+        }
+        function lossesText() {
             setTimeout(function () {
                 alert("SORRY, YOU LOST!");
+                //once alert function gets a response from user, message will disappear from winLoss class box. 
+                $("#losses").html(losses);
             }, 500);
         }
     });

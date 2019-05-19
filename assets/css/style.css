@@ -10,7 +10,7 @@ img{
     height:145.5px;
     float: left;
 }
-.titleBox{
+.title{
     background-color:#B0581F;
     height:70px;
     width:20%;
@@ -25,7 +25,7 @@ img{
     font-size:30px;
     color:white;
 }
-.directionBox{
+.instructions{
     background-color:#ECE4B4;
     width:40%;
     color:green;
@@ -36,7 +36,7 @@ img{
     margin-bottom:1%;
     margin-left:1%;
 }
-.randomNumberBox{
+.randomNumber{
     color:purple;
     background-color:#6BC239;
     padding:8px;
@@ -48,7 +48,7 @@ img{
     margin-right:2%;
     font-size:200%
 }
-.winLoseBox{
+.winLoses{
     background-color:#54EADF;
     width:7%;
     padding-top:15px;
@@ -61,7 +61,7 @@ img{
     align-items: center; 
     margin-left:3%;
 }
-.crystalsBox{
+.crystals{
     margin:.5%;
     width:35%;
     height:150px;
@@ -76,7 +76,7 @@ img{
     height:20px;
     width:20%;
 }
-.totalScoreBox{
+.totalScore{
     color:white;
     background-color: rgb(25, 139, 134);
     width:20%;
